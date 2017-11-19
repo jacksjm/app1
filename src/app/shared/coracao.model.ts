@@ -10,7 +10,7 @@ export class Coracao{
 		if(this.cheio){
 			return this.urlCoracaoCheio
 		}else{
-			return this.urlCoracaoCheio
+			return this.urlCoracaoVazio
 		}
 	}
 }
