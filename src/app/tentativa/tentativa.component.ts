@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Coracao } from '../shared/coracao.model';
 
@@ -9,8 +9,7 @@ import { Coracao } from '../shared/coracao.model';
 })
 export class TentativaComponent implements OnInit {
 
-  public coracaoCheio: string = '/assets/coracao_cheio.png'
-  public coracaoVazio: string = '/assets/coracao_vazio.png'
+  @Input() public tentativas: number
 
   public coracoes: Array<Coracao> = [
 	  new Coracao(true),
