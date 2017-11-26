@@ -23,7 +23,10 @@ export class TentativaComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-	  console.log(this.tentativas)
+	  if(this.tentativas !== this.coracoes.length){
+		  let indice = ( this.coracoes.length - this.tentativas ) - 1
+		  this.coracoes[indice].cheio = false
+	  }
   }
 
 }

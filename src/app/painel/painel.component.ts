@@ -34,11 +34,19 @@ export class PainelComponent implements OnInit {
   public verificarResposta(): void{
 
 	if(this.resposta == this.rodadaFrase.frasePtBr){
-		alert('A tradução está correta!')
-		this.progresso += 25
+		//Incrementa barra de progresso
+		this.progresso += 25 //this.progresso + ( 100 / this.frases.length )
+
+		//trocar pergunta da rodada
 		this.rodada++
+
+		if(this.rodada === 4){
+			alert('Você traduziu as frases corretamente')
+		}
+		//atualiza o objeto rodadaFrase
 		this.atualizaRodada()
 	}else{
+		//diminui as tentativas
 		this.tentativas--
 		if(this.tentativas === -1){
 			alert('Você perdeu todas as tentativas')
