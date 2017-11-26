@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  public jogoEmAngamento: boolean = true
+  public tipoEncerramento: boolean
+
+  public encerrarJogo(tipo: boolean): void{
+	this.tipoEncerramento = tipo
+	this.jogoEmAngamento = false
+  }
+
+  public reiniciarJogo(): void{
+	  this.jogoEmAngamento = true
+	  this.tipoEncerramento = undefined
+  }
 }
