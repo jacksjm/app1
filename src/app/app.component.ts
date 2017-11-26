@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public jogoEmAngamento: boolean = true
+  public mensagem: string = 'Caiu no Else'
 
   public encerrarJogo(tipo: boolean): void{
 	console.log(tipo)
